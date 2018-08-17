@@ -1,0 +1,149 @@
+html {
+  color: $base-font-color;
+  font-family: $base-font-family;
+  font-size: 100%;
+  line-height: $base-line-height;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $heading-font-family;
+  font-weight: normal;
+  line-height: $heading-line-height;
+  margin: 0 0 $small-spacing;
+  color: $heading-color;
+}
+
+// Heading Font Sizes
+h1 {
+  font-size: $h1-mobile;
+}
+h2 {
+  font-size: $h2-mobile;
+}
+h3 {
+  font-size: $h3-mobile;
+}
+h4 {
+  font-size: $h4-mobile;
+}
+h5 {
+  font-size: $h5-mobile;
+}
+h6 {
+  font-size: $h6-mobile;
+}
+
+// Responsive Headings
+@media screen and (min-width: 500px) {
+  h1 {
+    font-size: $h1;
+  }
+  h2 {
+    font-size: $h2;
+  }
+  h3 {
+    font-size: $h3;
+  }
+  h4 {
+    font-size: $h4;
+  }
+  h5 {
+    font-size: $h5;
+  }
+  h6 {
+    font-size: $h6;
+  }
+}
+
+p {
+  margin: 0 0 $small-spacing;
+}
+
+// Links
+a {
+  color: $action-color;
+  text-decoration-skip: ink;
+  transition: color $base-duration $base-timing;
+  text-decoration: none;
+
+  &:hover {
+    color: $hover-color;
+  }
+
+  &:focus {
+    outline: $focus-outline;
+    outline-offset: $focus-outline-offset;
+  }
+}
+
+// Horizontal Line
+hr {
+  border-bottom: $base-border;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  margin: $base-spacing 0;
+}
+
+// Blockquote
+blockquote {
+  margin: 0 0 $margins 0;
+  padding: 0 1rem;
+  border-left: $bq-border;
+  font-size: 1.5rem;
+  cite {
+      display: block;
+      text-align: right;
+      font-size: 1rem;
+  }
+}
+
+// Navigation
+.nav__item {
+  font-family: 'Questrial', sans-serif;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+// Mega title
+.mega-title {
+  font-size: 3rem;
+}
+
+// Tagline
+.tagline {
+  color: white;
+}
+
+@media screen and (min-width: 500px) {
+  .mega-title {
+    //font-size: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .mega-title {
+    //font-size: 3rem;
+  }
+}
+// Home page
+.intro {
+  font-size: $h2;
+  font-style: italic;
+}
+
+// Blog
+.post-info {
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+// Footer
+footer {
+  font-size: 0.8rem;
+}

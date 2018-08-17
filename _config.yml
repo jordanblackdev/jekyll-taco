@@ -1,0 +1,58 @@
+
+# Site Settings
+title: Jekyll Site
+author: Jordan Black
+email: hello@jordanblack.co.nz
+description: A basic theme for Jekyll. Edit this description in _config.yml.
+
+# Build Settings
+markdown: kramdown
+sass:
+  sass_dir: _sass
+  style: compressed
+plugins:
+  - jekyll-paginate-v2
+exclude:
+  - Gemfile
+  - Gemfile.lock
+
+# Permalinks
+# Produces a cleaner folder structure when using categories
+permalink: /:year/:month/:title.html
+
+# Social
+# Comment out the options you want to hide
+# Add your own usernames
+twitter_username: user
+github_username:  user
+dribbble_username: user
+facebook_username: user
+flickr_username: user
+instagram_username: user
+linkedin_username: user
+pinterest_username: user
+youtube_username: user
+googleplus_username: +user
+rss: rss
+
+# Collections
+collections:
+  - services
+
+# Pagination Settings
+pagination:
+  enabled: true
+  per_page: 3
+  permalink: '/page:num/'
+  title: ' - page :num'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
+
+# Excerpts
+# Set to true to show excerpts on the homepage
+show_excerpts: true
+
+# Note: when editing locally, remember to restart
+# your Jekyll server when you edit this file. Changes
+# to _config.yml are only recognized when the server starts

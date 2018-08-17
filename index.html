@@ -1,0 +1,60 @@
+---
+title: Home
+layout: default
+order: 1
+---
+<!-- Banner Image -->
+<section>
+  <div class="image-banner">
+    <h2 class="mega-title slide-up">This is a Mega Title</h2>
+    <h4 class="tagline slide-up">This is a tagline</h4>
+  </div>
+</section>
+
+<!-- Text -->
+<section class="intro">
+Curabitur quis arcu at est efficitur pellentesque eu in dui. Donec luctus felis metus, ac dapibus velit fringilla ut. Donec eu commodo nisl. Aenean id commodo arcu. Proin at molestie mauris.
+</section>
+
+<!-- Services -->
+<section>
+  <h2>Services</h2>
+
+  <div class="flex-grid flex-grid--thirds">
+    {% for service in site.services %}
+      <div class="services-card column">
+        <i class="{{ service.icon }} services-card__i"></i>
+        <div class="services-card__content">
+          <h4>{{ service.title }}</h4>
+          {{ service.content }}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- Latest Posts -->
+<section>
+  <h2>Latest Posts</h2>
+
+  {% if site.posts.size > 0 %}
+    <div class="flex-grid flex-grid--thirds">
+      {% for post in site.posts limit:3 %}
+        <div class="index-card column">
+          {%- if post.image -%}
+            <a href="{{ post.url }}"><img src="/assets/images/{{ post.image }}" alt="Post Image" class="index-card__image"></a>
+          {%- else -%}
+            <img src="http://via.placeholder.com/350x200" alt="" class="index-card__image">
+          {% endif %}
+          <div class="index-card__content">
+            <h4><a href="{{ post.url }}">{{ post.title}}</a></h4>
+            <small>{{ post.date | date: "%B %d, %Y" }}</small>
+            {%- if site.show_excerpts -%}
+              <p>{{ post.excerpt }}</p>
+            {%- endif -%}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  {%- endif -%}
+</section>

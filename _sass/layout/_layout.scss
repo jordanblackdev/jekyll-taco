@@ -1,0 +1,224 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+img {
+  display: block;
+}
+
+.content {
+  max-width: 1200px;
+  margin: 0 $margins;
+}
+// Header
+header {
+  display: flex;
+  flex-direction: column;
+  margin: 2 * $margins 0;
+  padding: $padding 0;
+}
+
+// Logo and Site Heading
+.title-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  .logo {
+    padding-right: $padding;
+    width: 75px;
+    height: 75px;
+  }
+
+  h1 {
+    margin-bottom: 0;
+  }
+}
+
+.menu-icon {
+  font-size: 20px;
+}
+
+// Navigation
+nav #nav {
+  list-style-type: none;
+  padding: 0;
+
+  .nav__item {
+    padding-bottom: $padding;
+  }
+
+  .nav__item > a {
+    padding: $padding;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+// Responsive Navigation
+@media screen and (min-width: 850px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .menu-icon {
+    display: none;
+  }
+
+  .nav-container {
+    margin: 0 auto;
+    align-items: center;
+    width: 1200px;
+    max-width: 100%;
+  }
+
+  nav #nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    padding: 0;
+
+    .nav__item {
+      padding-bottom: 0;
+    }
+
+    .nav__item > a {
+      padding: 0 $padding;
+    }
+
+    .nav__item:last-child a {
+      padding-right: 0;
+    }
+  }
+}
+
+// Index Page Sections
+section {
+  margin-bottom: 4 * $margins;
+}
+
+// Image Banner
+.image-banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $light-gray;
+  background-image: url("/assets/images/sebastian-unrau-47679-unsplash.jpg");
+  background-size: cover;
+  margin-bottom: 6em;
+  height: 600px;
+}
+
+@keyframes fade-in{
+  0% {
+    opacity:0;
+    transform:translateY(40px);
+  }
+
+  100% {
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fade-in ease 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+}
+
+// Mega title
+@keyframes slide-up{
+  0% {
+    transform:translateY(40px);
+  }
+
+  100% {
+    transform:translateY(0);
+  }
+}
+
+.slide-up {
+  animation: slide-up ease 500ms;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+}
+
+.mega-title {
+  color: white;
+  text-align: center;
+}
+
+.tagline {
+  color: white;
+  font-family: $base-font-family;
+}
+
+.intro {
+  text-align: center;
+}
+// Footer
+.footer {
+  padding: $padding 0;
+  margin-top: 2 * $margins;
+}
+
+.footer-module {
+  margin-bottom: 2 * $margins;
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+}
+
+// Responsive Footer
+@media screen and (min-width: 500px) {
+  .footer-module {
+    margin-bottom: 0;
+  }
+}
+
+ul.social-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  li {
+    font-size: 24px;
+    padding-right: $padding;
+  }
+}
+
+// Responsiveness
+@media screen and (min-width: 1200px) {
+  .content {
+    margin: 0 auto;
+  }
+}

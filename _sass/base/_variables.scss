@@ -1,0 +1,66 @@
+// Typography
+$base-font-family: 'Open Sans', sans-serif;
+$heading-font-family: 'Questrial', sans-serif;
+
+// Line height
+$base-line-height: 1.5;
+$heading-line-height: 1.2;
+
+// Other Sizes
+$base-border-radius: 3px;
+$base-spacing: 1.5rem;
+$small-spacing: $base-spacing / 2;
+$base-z-index: 0;
+
+// Colors
+$blue: #1565c0;
+$dark-gray: #333;
+$medium-gray: #999;
+$light-gray: #efefef;
+
+// Font Colors
+$base-font-color: $medium-gray;
+$heading-color: $dark-gray;
+$action-color: #00b771;
+$hover-color: #003328;
+
+// Borders
+$base-border-color: $light-gray;
+$base-border: 1px solid $base-border-color;
+$bq-border: 5px solid $base-border-color;
+
+// Background Colors
+$base-background-color: #fff;
+$secondary-background-color: tint($base-border-color, 75%);
+
+// Padding
+$padding: 1rem;
+$margins: 1rem;
+$content-padding: 60px 0;
+$content-padding-mobile: 30px 0;
+
+// Mobile Heading Font Size
+$h1-mobile: 1.75rem;
+$h2-mobile: 1.5rem;
+$h3-mobile: 1.25rem;
+$h4-mobile: 1.1rem;
+$h5-mobile: 1rem;
+$h6-mobile: 0.75rem;
+
+// Heading Font Size
+$h1: 2.25rem;
+$h2: 2rem;
+$h3: 1.75rem;
+$h4: 1.5rem;
+$h5: 1.25rem;
+$h6: 1rem;
+
+// Focus
+$focus-outline-color: transparentize($action-color, 0.4);
+$focus-outline-width: 3px;
+$focus-outline: $focus-outline-width solid $focus-outline-color;
+$focus-outline-offset: 2px;
+
+// Animations
+$base-duration: 0.5s;
+$base-timing: ease;

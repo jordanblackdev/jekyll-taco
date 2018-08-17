@@ -1,0 +1,26 @@
+// Responsiveness
+@media screen and (min-width: 500px) {
+  .flex-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .flex-grid--thirds .column {
+    width: 48%;
+  }
+  .flex-grid--halves .column {
+    width: 48%;
+  }
+  .flex-grid--quarters .column {
+    width: 48%;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .flex-grid--thirds .column {
+    width: 30%;
+  }
+  .flex-grid--quarters .column {
+    width: 23%;
+  }
+}

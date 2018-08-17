@@ -1,0 +1,22 @@
+<header>
+  <div class="title-area">
+    <div class="logo-container">
+      <div class="logo">
+        <a href="{{ site.url | absolute_url }}"><img src="/assets/logo.svg" alt="Logo"></a>
+      </div>
+      <h1>{{ site.title }}</h1>
+    </div>
+    <span class="menu-icon"><i class="fas fa-bars"></i></span>
+  </div>
+
+  <nav class="navigation">
+    <ul id="nav" class="hidden">
+      {% assign mypages = site.pages | sort: "order" %}
+      {% for page in mypages %}
+        {% unless page.exclude or page.url contains 'page' %}
+          <li class="nav__item"><a href="{{ page.url | absolute_url }}">{{ page.title }}</a></li>
+        {% endunless %}
+      {% endfor %}
+    </ul>
+  </nav>
+</header>

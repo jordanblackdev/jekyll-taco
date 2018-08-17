@@ -1,0 +1,33 @@
+<div id="sidebar">
+  <h6>Archives</h6>
+  <ul>
+    {% assign counter = 0 %}
+    {% for post in site.posts %}
+      {% assign currentDate = post.date | date: "%B %Y" %}
+      {% assign prevYear = post.previous.date | date: "%B %Y" %}
+      {% assign counter = counter | plus: 1 %}
+      {% if currentDate != prevYear %}
+        <li><a href="/archive/#{{ post.date | date:"%B %Y" }}">{{ currentDate }} ({{ counter }})</a></li>
+        {% assign counter = 0 %}
+      {% endif %}
+    {% endfor %}
+  </ul>
+
+  <h6>Categories</h6>
+  <ul>
+    {% for category in site.categories %}
+      <li>
+        <a href="{{ baseurl }}/category/{{ category | first }}.html">{{ category | first }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <h6>Latest Posts</h6>
+  <ul>
+    {% for post in site.posts limit:3 %}
+      <li>
+        <a href="{{ post.url }}">{{ post.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>

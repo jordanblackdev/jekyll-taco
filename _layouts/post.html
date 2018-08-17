@@ -1,0 +1,15 @@
+---
+layout: blog
+---
+<article>
+  <h2>{{ page.title }}</h2>
+  <div class="post__info">
+    <span>Posted on {{ page.date | date: "%B %d, %Y" }} in {{ page.categories | join: ', ' }} by {{ page.post_author }}</span>
+  </div>
+  {%- if page.image -%}
+    <img src="/assets/images/{{ page.image }}" alt="Post Image" class="post__image">
+  {%- endif -%}
+  <p class="post">
+    {{ content }}
+  </p>
+</article>

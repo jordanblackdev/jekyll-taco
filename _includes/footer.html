@@ -1,0 +1,38 @@
+<footer class="footer flex-grid flex-grid--quarters">
+  <div class='footer-module column'>
+    <h5>About</h5>
+    <p>{{ site.description }}</p>
+  </div>
+  <div class='footer-module column'>
+    <h5>Latest Posts</h5>
+    <ul>
+      {% for post in site.posts limit:4 %}
+        <li>
+          <a href="{{ post.url }}">{{ post.title}}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div class='footer-module column'>
+    <h5>Categories</h5>
+    <ul>
+      {% for category in site.categories %}
+        <li>
+          <a href="{{ baseurl }}/category/{{ category | first }}.html">{{ category | first }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div class='footer-module column'>
+    <h5>Social</h5>
+    {% include social.html %}
+  </div>
+</footer>
+
+<script>
+$(document).ready(function() {
+  jQuery('.menu-icon').click(function(e) {
+    $("#nav").toggleClass("hidden");
+  });
+});
+</script>
